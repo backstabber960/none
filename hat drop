@@ -1,0 +1,7 @@
+for _,a in next,game.Players.LocalPlayer.Character:GetChildren()do
+if a:IsA("Accessory")and a:FindFirstChild("Handle")then
+a.Handle:BreakJoints()a.Handle.Massless=false a.Handle.CanCollide=true
+if a.Handle:FindFirstChildOfClass("SpecialMesh")then a.Handle:FindFirstChildOfClass("SpecialMesh"):Destroy()end
+end end
+game.StarterGui:SetCore("SendNotification",{Title="droped",Text="mesh gone collide on reset fe lol",Icon="rbxassetid://11745872910",Duration=5})
+task.wait(.9)
